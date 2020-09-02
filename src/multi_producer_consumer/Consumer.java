@@ -13,7 +13,7 @@ public class Consumer implements Runnable{
         while (this.alive) {
             try {
                 resource.remove();
-//                Thread.sleep(1000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

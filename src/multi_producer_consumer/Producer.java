@@ -17,7 +17,7 @@ public class Producer implements Runnable {
         for (int i=start; i<= end; i++){
             try {
                 resource.add(i);
-//                Thread.sleep(1000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
