@@ -45,7 +45,7 @@ class Single1 implements Cloneable{
 }
 
 
-class Main1 {
+class Main {
     public static void main(String[] args) throws InterruptedException, CloneNotSupportedException {
         Thread a = new Thread(new Runnable() {
             @Override
