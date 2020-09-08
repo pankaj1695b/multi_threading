@@ -3,10 +3,10 @@ package builder_pattern;
 
 public class House {
     private int a;
-    private int b = 3;
+    private int b;
     private int c;
 
-    static Builder builder() {
+    public static Builder builder() {
         return new Builder();
     }
 
@@ -14,7 +14,7 @@ public class House {
         return "a:" + a + " b:" + b + " c:" +c;
     }
 
-    static class Builder {
+    public static class Builder {
         private int a = 0;
         private int b = 0;
         private int c = 0;
@@ -34,7 +34,7 @@ public class House {
             return this;
         }
 
-        House build () {
+        public House build () {
             House h = new House();
             h.a = a;
             h.b = b;
