@@ -45,6 +45,11 @@ public class Theatre {
             return false;
         }
         synchronized (this) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             if (seats.get(seatNumber).isBooked()) {
                 return false;
             }

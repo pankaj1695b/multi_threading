@@ -18,9 +18,9 @@ public class TheatreManager {
         List<Seat> seats = new ArrayList<>();
         for (int i=0; i<inox.getCapacity(); i++) {
             if (i<inox.getCapacity()/2) {
-                seats.add(new Seat(SeatType.NORMAL, 50));
+                seats.add(new Seat(SeatType.NORMAL, 50, i));
             } else {
-                seats.add(new Seat(SeatType.PREMIUM, 100));
+                seats.add(new Seat(SeatType.PREMIUM, 100, i));
             }
         }
         inox.setSeats(seats);

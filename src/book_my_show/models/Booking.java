@@ -1,7 +1,5 @@
 package book_my_show.models;
 
-import java.util.List;
-
 public class Booking {
     int id;
     String theatreName;

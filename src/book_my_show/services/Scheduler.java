@@ -9,6 +9,11 @@ public class Scheduler {
     private static ExecutorService scheduler = Executors.newFixedThreadPool(3);
 
     public static <T> Future<T> submitTask(Callable<T> task){
+        System.out.println("Task submitted to scheduler ");
         return scheduler.submit(task);
+    }
+
+    public static void killScheduler() {
+        scheduler.shutdown();
     }
 }

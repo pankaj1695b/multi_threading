@@ -4,12 +4,22 @@ public class Seat {
     private SeatType type;
     private int price;
     private boolean isBooked;
+    private int seatNumber;
+
+    public int getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
 
     @Override
     public String toString() {
         return "Seat{" +
                 "type=" + type +
                 ", price=" + price +
+                ", seatNumber=" + seatNumber +
                 '}';
     }
 
@@ -37,8 +47,9 @@ public class Seat {
         isBooked = booked;
     }
 
-    public Seat(SeatType type, int price) {
+    public Seat(SeatType type, int price, int seatNumber) {
         this.type = type;
         this.price = price;
+        this.seatNumber = seatNumber;
     }
 }
