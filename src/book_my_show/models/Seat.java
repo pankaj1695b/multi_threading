@@ -51,5 +51,6 @@ public class Seat {
         this.type = type;
         this.price = price;
         this.seatNumber = seatNumber;
+        this.isBooked = false;
     }
 }

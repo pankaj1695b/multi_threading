@@ -9,6 +9,11 @@ public class BookingService {
     private static Booking createBooking(String theatreName, int seatNumber){
         System.out.println("Thread: " + Thread.currentThread().getName()
                         + ": Trying to book seat: " + seatNumber);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Theatre theatre = TheatreManager.getTheatre(theatreName);
 
         boolean seatbooked = theatre.bookSeat(seatNumber);
@@ -26,7 +31,6 @@ public class BookingService {
         b.setSeat(theatre.getSeats().get(seatNumber));
         System.out.println("Thread: " + Thread.currentThread().getName()
                 + ": Finished booking seat: " + seatNumber);
-        b.setStatus("Seat not available");
         return b;
     }
 

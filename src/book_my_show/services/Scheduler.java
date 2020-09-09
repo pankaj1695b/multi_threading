@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class Scheduler {
-    private static ExecutorService scheduler = Executors.newFixedThreadPool(3);
+    private static ExecutorService scheduler = Executors.newFixedThreadPool(10);
 
     public static <T> Future<T> submitTask(Callable<T> task){
         System.out.println("Task submitted to scheduler ");
