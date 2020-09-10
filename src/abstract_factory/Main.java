@@ -10,6 +10,5 @@ public class Main {
         System.out.println(SuperFactory.getObject(FactoryType.FACTORY1, ProductType.PRODUCT2));
         System.out.println(SuperFactory.getObject(FactoryType.FACTORY2, ProductType.PRODUCT1));
         System.out.println(SuperFactory.getObject(FactoryType.FACTORY2, ProductType.PRODUCT2));
-
     }
 }
