@@ -17,7 +17,7 @@ public class BookingClient {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ArrayList<Future<Booking>> bookings = new ArrayList<>();
-        for (int i=0; i<10; i++) {
+        for (int i=0; i<20; i++) {
             System.out.println("Sending request to book seat: " + i/2);
             bookings.add(
                     BookingService.createBookingApi("inox", i/2)
